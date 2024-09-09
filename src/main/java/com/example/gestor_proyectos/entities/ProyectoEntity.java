@@ -32,4 +32,8 @@ public class ProyectoEntity {
 
     @Column(name = "estado_proyecto")
     private String estadoProyecto;
+
+    @ManyToOne
+    @JoinColumn(name = "id_responsable_proyecto")
+    private PersonaEntity responsable;
 }

@@ -26,4 +26,8 @@ public class AvanceEntity {
 
     @Column(name = "porcentaje_avance")
     private Integer porcentajeAvance;
+
+    @ManyToOne
+    @JoinColumn(name = "id_tarea")
+    private TareaEntity tarea;
 }
