@@ -24,13 +24,15 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    runtimeOnly 'org.postgresql:postgresql'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //manejo BD
+    implementation 'org.springframework.boot:spring-boot-starter-web' //publicar APIs por medio de una URL
+    implementation 'org.modelmapper:modelmapper:2.3.8' //mapear(conversión) entre las clases DTO y Entity
+    compileOnly 'org.projectlombok:lombok' //dependencia para facilitar la construcción de get-set-constructor...
+    runtimeOnly 'org.postgresql:postgresql' //conexión a la BD
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.security:spring-security-crypto'
 }
 
 tasks.named('test') {
