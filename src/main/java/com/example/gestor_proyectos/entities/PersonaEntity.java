@@ -29,8 +29,8 @@ public class PersonaEntity {
     @Column(name = "telefono")
     private String telefono;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "correo")
+    private String correo;
 
     @Column(name = "usuario")
     private String usuario;
