@@ -1,5 +1,7 @@
 package com.example.gestor_proyectos.dto;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.util.List;
@@ -9,6 +11,8 @@ import java.util.List;
 public class PersonaDto {
 
     private Integer id;
+    @NotEmpty(message = "el campo nombre no puede estar vacío")
+    @NotNull(message = "el campo nombre no puede ser nulo")
     private String nombres;
     private String apellidos;
     private String identificacion;
